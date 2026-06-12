@@ -618,7 +618,7 @@ submitBugBtn.addEventListener('click', () => {
         <span class="bug-priority ${priorityClass}">${priority}</span>
         <p class="bug-desc">${summary}</p>
         <div class="bug-actions">
-            <button class="btn-verify" onclick="moveBug('${card.id}', 'in-progress')">Start Testing</button>
+            <button class="btn-verify btn-start-test">Start Testing</button>
         </div>
     `;
     
@@ -628,25 +628,49 @@ submitBugBtn.addEventListener('click', () => {
     clearBugForm();
 });
 
-// Global scopes for inline onclick events
-window.moveBug = function(bugId, column) {
+// JIRA board action handlers using Event Delegation
+const jiraLayout = document.querySelector('.jira-layout');
+if (jiraLayout) {
+    jiraLayout.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-verify');
+        if (!btn) return;
+        
+        const card = btn.closest('.jira-card');
+        if (!card) return;
+        
+        const bugId = card.id;
+        
+        if (btn.classList.contains('btn-start-test')) {
+            moveBug(bugId, 'in-progress');
+        } else if (btn.classList.contains('btn-retest-verify')) {
+            verifyBugFix(bugId);
+        }
+    });
+}
+
+function moveBug(bugId, column) {
     const card = document.getElementById(bugId);
     if (!card) return;
     
     if (column === 'in-progress') {
         const actionArea = card.querySelector('.bug-actions');
-        actionArea.innerHTML = `<button class="btn-verify" onclick="verifyBugFix('${bugId}')">Retest &amp; Verify</button>`;
+        if (actionArea) {
+            actionArea.innerHTML = `<button class="btn-verify btn-retest-verify">Retest &amp; Verify</button>`;
+        }
         progressHolder.appendChild(card);
     }
     updateJiraCounts();
-};
+}
 
-window.verifyBugFix = function(bugId) {
+function verifyBugFix(bugId) {
     const card = document.getElementById(bugId);
     if (!card) return;
     
     const actionArea = card.querySelector('.bug-actions');
+    if (!actionArea) return;
+    
     const verifyBtn = actionArea.querySelector('button');
+    if (!verifyBtn) return;
     
     verifyBtn.disabled = true;
     verifyBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Running automated tests...`;
@@ -665,4 +689,4 @@ window.verifyBugFix = function(bugId) {
         resolvedHolder.appendChild(card);
         updateJiraCounts();
     }, 1200);
-};
+}
