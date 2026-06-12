@@ -1,0 +1,30 @@
+﻿P. SIVA PHANEENDRA
+QA Engineer  |  Manual, Automation & API Testing
+Bengaluru, India   •   +91-9346572996   •   phaniphani0288@gmail.com
+Professional Summary
+QA Engineer with 1 year of hands-on experience in manual, automation, and API testing of web applications. Skilled in designing and executing test cases across functional, integration, regression, and end-to-end cycles; building Selenium WebDriver scripts in Java; validating REST APIs in Postman; and managing the full defect lifecycle in JIRA within Agile teams. Strong analytical and problem-solving mindset with a focus on defect prevention, testability, and continuous improvement of product quality.
+Technical Skills
+Testing Types: Functional, Smoke, Integration, System, Regression, End-to-End, UI, Compatibility (Cross-Browser/Responsive), Usability, Black-Box Testing
+Automation Testing: Selenium WebDriver (Java); locators – ID, Name, XPath, CSS Selector, Class Name; handling Web Elements, Alerts, Frames, Windows, Dropdowns; Extent Reports
+API Testing: Postman – GET, POST, PUT, DELETE requests; HTTP status code and request/response validation
+Programming: Java (OOP fundamentals), SQL (queries and data validation)
+Defect Management: JIRA – defect logging, prioritization, tracking, retesting, and reporting
+Process & Methodology: Agile/Scrum, STLC, SDLC, test case design techniques, requirement analysis
+Currently Upskilling: Python for test automation, Pytest, BDD (Gherkin/Cucumber), CI/CD with Jenkins, Git
+Professional Experience
+Software Test Engineer Intern	Jun 2025 – Present
+WizzyBox Private Limited
+Project: Bowizzy – Career Acceleration Platform (Web Application)
+An ATS-compatible resume builder with customizable templates, personalized career guidance, and an interview preparation module covering the full job-application journey.
+Developed Selenium WebDriver regression test scripts in Java using ID, Name, XPath, and CSS Selector locators, automating [40+] repetitive UI scenarios across the Resume Builder, Template Selection, and Interview modules.
+Executed automated regression suites for every release and generated Extent reports communicating pass/fail status of each regression run to stakeholders.
+Validated REST API requests and responses in Postman — sending GET, POST, PUT, and DELETE requests and verifying HTTP status codes, response payloads, and data integrity.
+Analyzed software requirement specifications to identify testable features and designed [250+] detailed test scenarios and test cases using standard test design techniques.
+Performed functional, integration, UI, and end-to-end testing to ensure smooth user experience and data validation across pages.
+Conducted cross-browser and responsive testing to validate compatibility across devices and browsers.
+Logged and tracked [100+] defects in JIRA, prioritized by severity, collaborated with developers on root-cause analysis and resolution, and verified fixes through retesting — contributing to on-time, quality releases across [6+] sprint cycles.
+Participated in Agile ceremonies (sprint planning, daily stand-ups, retrospectives), contributing testability feedback during design discussions.
+Certification
+Software Testing Certification – Manual, Automation (Selenium), API (Postman), and SQL — NammaQA.
+Education
+Bachelor of Engineering — East West Institute of Technology (EWIT), Visvesvaraya Technological University (VTU)
